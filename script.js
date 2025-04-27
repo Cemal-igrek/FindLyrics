@@ -32,3 +32,19 @@ document.getElementById("lyrics-form").addEventListener("submit", function(e) {
       button.innerHTML = `Get Lyrics`;
     });
 });
+/**
+ * ======================================================
+ * 🎵 Lyrics Finder Project 🎵
+ * 
+ * A simple app to search for song lyrics by artist and title.
+ * Built with vanilla JavaScript, HTML5, and Bootstrap5.
+ * 
+ * - Fetches lyrics from the Lyrics.ovh API
+ * - Displays lyrics neatly inside a styled card
+ * - Shows notifications for success and errors
+ * - Responsive and clean design
+ * 
+ * Author: [Cemal İgrek]
+ * Github: https://github.com/Cemal-igrek
+ * ======================================================
+ */
