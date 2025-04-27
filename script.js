@@ -12,6 +12,10 @@ document.getElementById("lyrics-form").addEventListener("submit", function(e) {
 
   lyricsEl.textContent = "Loading lyrics... 🎵";
 
+  const button = document.querySelector("button");
+  button.disabled = true;
+  button.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Loading...`;
+  
   fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
     .then(res => {
       if (!res.ok) throw new Error("Lyrics not found.");
@@ -22,5 +26,9 @@ document.getElementById("lyrics-form").addEventListener("submit", function(e) {
     })
     .catch(err => {
       lyricsEl.textContent = "Sorry, lyrics not found.";
+    })
+    .finally(() => {
+      button.disabled = false;
+      button.innerHTML = `Get Lyrics`;
     });
 });
